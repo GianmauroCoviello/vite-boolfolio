@@ -3,10 +3,15 @@ export default {
     name: 'AppMain',
     data() {
         return {
-            
+            baseUrl: 'http://127.0.0.1:8000',
+            project: [],
+            loader: true
         }
     },
     created() {
+        
+    },
+    methods: {
         
     },
   
@@ -14,8 +19,14 @@ export default {
 </script>
 
 <template lang="">
-  <div>
-    ciao a tutti
+  <div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>BOOLFOLIO</h1>
+        </div>
+
+    </div>
+
   </div>
 </template>
 
