@@ -1,17 +1,36 @@
 <script>
+import axios from 'axios';
+
 export default {
     name: 'AppMain',
     data() {
         return {
             baseUrl: 'http://127.0.0.1:8000',
-            project: [],
+            projects: [],
             loader: true
         }
     },
     created() {
-        
+        this.getProjects()
     },
     methods: {
+        getProjects(){
+            this.loader = true;
+            axios.get(`${this.baseUrl}/api/projects`).then((response)=>{
+                console.log(response)
+                if (response.data.status) {
+                    this.projects = response.data.results;
+                    this.loader = false;
+                    
+                }
+                else{
+
+                
+
+                }
+
+            })
+        },
         
     },
   
