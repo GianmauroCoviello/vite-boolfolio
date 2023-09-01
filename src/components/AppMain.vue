@@ -47,7 +47,8 @@ export default {
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
-                <h1>BOOLFOLIO</h1>
+                <h1 class="mb-5 mt-3">BOOLFOLIO</h1>
+                
             </div>
 
         </div>
@@ -56,8 +57,17 @@ export default {
     <AppLoader v-if="loader"/>
     <div v-else class="container">
         <div class="row">
-            <div class="col-12 " v-for='project in projects' ::key="project.id">
-                <p>{{project.title}}</p>
+            <div class="col-3 py-3 " v-for='project in projects' ::key="project.id">
+                <!-- <p></p> -->
+
+                <div class="card" style="width: 18rem;">
+                    <img :src=" ` ${baseUrl}/storage/${project.cover_image}`" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{project.title}}</h5>
+                      <p class="card-text">{{project.content}}</p>
+                      <a href="#" class="btn btn-primary">leggi l'articolo</a>
+                    </div>
+                </div>
                 
             </div>
 
