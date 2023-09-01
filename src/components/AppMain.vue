@@ -63,9 +63,25 @@ export default {
                 <div class="card" style="width: 18rem;">
                     <img :src=" ` ${baseUrl}/storage/${project.cover_image}`" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">{{project.title}}</h5>
-                      <p class="card-text">{{project.content}}</p>
-                      <a href="#" class="btn btn-primary">leggi l'articolo</a>
+                        <h5 class="card-title">{{project.title}}</h5>
+                        <p class="card-text">{{project.content}}</p>
+                        <p></p>
+                        <!-- type -->
+                        <p class="card-text" v-if='project.type'><strong>tipologia del progetto: </strong>{{project.type.name}}</p>
+                        <p v-else>Tipologia assente</p>
+                        
+                        <!-- technologies -->
+                        <div class='pb-3'>
+                            <span class='badge bg-success m-1' v-if='project.technologies' v-for='tech in project.technologies' :key="tech.id">
+                                {{tech.name}}
+                            </span>
+                        </div>
+                        
+                        
+                        
+                        
+                        <a href="#" class="btn btn-primary">leggi l'articolo</a>
+                        
                     </div>
                 </div>
                 
