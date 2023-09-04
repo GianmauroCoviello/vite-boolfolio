@@ -77,9 +77,6 @@ export default {
                             </span>
                         </div>
                         
-                        
-                        
-                        
                         <a href="#" class="btn btn-primary">leggi l'articolo</a>
                         
                     </div>
