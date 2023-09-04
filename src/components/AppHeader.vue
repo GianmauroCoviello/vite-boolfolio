@@ -5,16 +5,21 @@ export default {
         return {
             vociMenu:[
                 {
-                    voci:'Home'
+                    voci:'Home',
+                    route: 'home'
                 },
                 {
-                    voci:'type'
+                    voci:'Progetti',
+                    route: 'Progetti'
                 },
                 {
-                    voci:'technologies'
+                    voci:'Type',
                 },
                 {
-                    voci:'chi siamo'
+                    voci:'Technologies'
+                },
+                {
+                    voci:'Chi siamo'
                 },
                 {
                     voci:'Contatti'
@@ -36,7 +41,7 @@ export default {
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item" v-for="(item, index) in vociMenu" :key="index">
-                    <!-- rotta per la home -->
+                   
                     <a class="nav-link active" aria-current="page" href="#">{{item.voci}}</a>
                   </li>
                  
