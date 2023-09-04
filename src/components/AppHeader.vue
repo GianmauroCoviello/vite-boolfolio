@@ -6,11 +6,11 @@ export default {
             vociMenu:[
                 {
                     voci:'Home',
-                    route: 'home'
+                    routeName: 'home'
                 },
                 {
                     voci:'Progetti',
-                    route: 'Progetti'
+                    routeName: 'Progetti'
                 },
                 {
                     voci:'Type',
@@ -42,7 +42,8 @@ export default {
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item" v-for="(item, index) in vociMenu" :key="index">
                    
-                    <a class="nav-link active" aria-current="page" href="#">{{item.voci}}</a>
+                    <!-- < class="nav-link active" aria-current="page" href="#"></a> -->
+                    <router-link class="nav-link active" :to="{name: item.routeName}">{{item.voci}}</router-link>
                   </li>
                  
                 </ul> 

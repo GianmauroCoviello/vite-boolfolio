@@ -3,7 +3,8 @@ import {createRouter, createWebHistory} from "vue-router";
 // importiamo le componenti
 import HomePage from './pages/HomePage.vue';
 
-import Projects from './pages/Projects.vue';
+import ProjectsList from './pages/ProjectsList.vue';
+// import ProjectsListVue from "./pages/ProjectsList.vue";
 
 const router = createRouter({
 
@@ -13,13 +14,13 @@ const router = createRouter({
         {
             path: '/',
             name: 'home',
-            components: HomePage
+            component: HomePage
 
         },
         {
-            path: '/',
+            path: '/ProjectsList',
             name: 'Progetti',
-            components: Projects
+            component: ProjectsList
 
         }
     ]

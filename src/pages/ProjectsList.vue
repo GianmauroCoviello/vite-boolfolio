@@ -48,6 +48,7 @@ export default {
         <div class="row">
             <div class="col-12 text-center">
                 <h1 class="mb-5 mt-3">BOOLFOLIO</h1>
+                <h2 class='mb-5'>My Projects:</h2>
                 
             </div>
 
